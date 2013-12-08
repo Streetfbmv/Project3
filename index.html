@@ -1,17 +1,35 @@
 <html>
     <head>
-        <title>Soundcloud APT Example</title>
+        <!--Zach Jones-->
+        <title>Soundcloud API Example</title>
     </head>
     <body>
-        
-        <div id="trackListing">
-        
+        <ul>
+            <li id="home">Home</li>
+            <li id="search">Search</li>
+        </ul>
+        <div id="content">
+            
+            
         </div>
+        
+        <div>
+            Now playing: <span id="txtNow"></span>
+            <input type="button" value="search" id="btnSearch" />
+            <input type="button" value="stop" id="btnStop" />
+        </div>
+        <div>
+            <progress id='position' max='1' value='0'>
+            </progress>
+        </div>
+      
         
         <div id="playlist"></div>
         
-        <script src="jquery-2.0.3.min.js"></script>
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script src="http://connect.soundcloud.com/sdk.js"></script>
-        <script src="site.js"></script>
+        <script src="js/jukebox.js"></script>
+        <script src="js/site.js"></script>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
     </body>
 </html>

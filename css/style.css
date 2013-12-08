@@ -1,0 +1,25 @@
+body {
+    color: #333;
+}
+            
+#content {
+    width: 300px;
+    float: left;
+}
+            
+#content li {
+    list-style-type: none;
+    background: #FC0;
+    margin: 5px 0;
+    padding: 2px;
+    cursor: pointer;
+}
+            
+#playlist {
+    width: 300px;
+    float: left;
+}
+            
+#playlist li {
+    list-style-type: none;
+}
