@@ -1,25 +1,335 @@
+/*Zach Jones date created: 11/15/13*/
+
+@font-face {
+	font-family: CandyCane;
+	src: url(../assets/candycane.ttf);
+}
+
+@font-face {
+	font-family: Handwriting;
+	src: url(../assets/Snickles.ttf);
+}
+
 body {
     color: #333;
+    margin: 0;
+    background:#401445;
+    font-family:sans-serif;
 }
-            
+
+#container {
+     width:80%;
+     background:#C6E2FF;
+     margin:auto;
+     box-shadow:0px 0px 20px #C6E2FF;
+	 overflow: hidden;
+}
+
+h1, h2 {
+	font-family: CandyCane, "Arial Black", Gadget, sans-serif;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+h2 {
+	font-size: 30px;
+	text-align: center;
+}
+
+header{
+    overflow:hidden;
+}
+
+header ul li{
+    width:90px;
+    height:122px;
+    background-repeat:no-repeat;
+    background-size:contain;
+    list-style-type:none;
+    text-align:center;
+    font-weight:bold;
+    padding-top:65px;
+    color: #efefef;
+    font-size:18px;
+    display:inline-block;
+    margin-right:70px;
+	cursor: pointer;
+}
+
+header ul li:nth-child(1){
+    background-image: url(../assets/red.png);
+    transform:rotate(20deg);
+    -ms-transform:rotate(20deg);
+    -webkit-transform:rotate(20deg);
+}
+
+header ul li:nth-child(2){
+    background-image: url(../assets/green.png);
+     transform:rotate(-20deg);
+    -ms-transform:rotate(-20deg);
+    -webkit-transform:rotate(-20deg);
+}
+
+header ul{
+    float:right;
+}
+
+header img {
+	float: left;
+	margin: 20px 10px 0px 40px;
+}
+
+header h1{
+	float: left;
+	margin: 70px 25px;
+	vertical-align: middle;
+}
+
+#searchBar {
+    float:left;
+    margin-right:50px;
+}
+
+#searchBar input{
+    float:left;
+}
+
+#pullBar{
+    padding:7px 15px;
+    height:108px;
+    width:90%;
+	background: #BCC6CC;
+    margin-left:-88%;
+}
+
+#pullBar img{
+    float:right;
+    margin-right:-85px;
+}
+
+#pullBar input {
+	padding: 7px 40px;
+	margin-right: 15px;
+}
+
+#searchBar {
+	margin-top: 35px;
+}
+
+#btnSearch, #btnPlay, #btnStop {
+	border-radius: 7px;
+	border: none;
+	font-size: 13px;
+	font-weight: bold;
+	cursor: pointer;
+	
+	color: #fff;
+	background: #C00;
+	box-shadow: 3px 3px 2px #fff;
+}
+
+#btnSearch:hover, #btnPlay:hover, #btnStop:hover {
+	color: #C00;
+	background: #FFF;
+	box-shadow: 3px 3px 2px #C00;
+}
+
+#btnSearch {
+	padding: 6px 30px;
+}
+
+#buttons {
+	transform:rotate(90deg);
+	-ms-transform:rotate(90deg);
+	-webkit-transform:rotate(90deg);
+	height: 108px;
+	float: right;
+}
+
+#btnPlay, #btnStop {
+	padding: 3px 10px 6px 10px;
+}
+
+#content, #playlist {
+	min-height: 500px;
+	vertical-align: top;
+}
+
+#nowPlaying {
+	font-size: 22px;
+	font-weight: bold;
+	margin-top: 25px;
+	vertical-align: middle;
+	float:left;
+	width: 50%;
+}
+
+#position {
+	margin-top: 7px;
+	width: 100%;
+	
+	background-color: #c00;
+	border-radius: 10px;
+	padding: 4px;
+}
+
+#position::-webkit-progress-bar {  
+    background-color: #fff;
+	border-radius: 10px;
+	padding: 0px;
+}
+
+#txtNow {
+	font-weight: normal;
+	font-size: 18px;
+}
+
 #content {
-    width: 300px;
-    float: left;
+	width: 49.7%;
+	border-top: 2px dotted #000;
+	float: left;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 }
-            
+
+#content li:nth-child(2) {
+	margin-top: 64px;
+}
+
+#content li:last-child {
+	margin-bottom: 125px;
+}
+
 #content li {
-    list-style-type: none;
-    background: #FC0;
-    margin: 5px 0;
-    padding: 2px;
-    cursor: pointer;
+	clear: both;
+	margin: 20px 0px;
+	padding: 5px 40px 5px 70px;
+	border-top: 1px solid transparent;
+	border-bottom: 1px solid transparent;
 }
-            
+
+#content li:hover {
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+
+#content li span {
+	display: inline-block;
+}
+
+#content li span:first-child {
+	width: 60%;
+}
+
+#content li span:last-child {
+	float: right;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	cursor: pointer;
+	font-weight: bold;
+	width: 30%;
+	margin-top: 3px;
+	padding: 5px 10px;
+	text-align: center;
+	border-radius: 20px;
+	border: none;
+	color: #fff;
+	background: #C00;
+	box-shadow: 3px 3px 2px #fff;
+}
+
+#content li span:last-child:hover {
+	color: #C00;
+	background: #FFF;
+	box-shadow: 3px 3px 2px #C00;
+}
+
+#content p {
+	margin-left: 25px;
+}
+
+#content {
+    overflow: hidden;
+}
+
+#content li {
+	list-style-type: none;
+	margin-left: 20px;
+	font-family: Handwriting, "Arial Black", Gadget, sans-serif;
+	font-size: 26px;
+}
+
+#playlist img {
+	margin: auto;
+	display: block;
+	margin-top: -65px;
+	position: relative;
+	opacity: .7;
+	z-index: 1;
+}
+
+#playlist h2 {
+	position: relative;
+	z-index: 4;
+}
+
 #playlist {
-    width: 300px;
     float: left;
+	width: 50%;
+	border-top: 2px dotted #000;
+	border-left: 2px dotted #000;
 }
-            
-#playlist li {
-    list-style-type: none;
+
+#playlist .addToPlaylist {
+	width: 150px;
+	min-height: 120px;
+	float: left;
+	font-weight: bold;
+	margin: 15px 30px;
+	padding: 60px 7px 7px 7px;
+	text-align: center;
+	background-image: url(../assets/present.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+#playlist .addToPlaylist button {
+	padding: 5px 25px;
+	border-radius: 7px;
+	border: none;
+	font-size: 13px;
+	font-weight: bold;
+	cursor: pointer;
+	
+	color: #fff;
+	background: #C00;
+	box-shadow: 3px 3px 2px #fff;
+}
+
+#playlist .addToPlaylist button:hover {
+	color: #C00;
+	background: #FFF;
+	box-shadow: 3px 3px 2px #C00;
+}
+
+@-webkit-keyframes pullBar {
+    from{margin-left:-88%;}
+    to{margin-left:0;}
+}
+
+@keyframes pullBar {
+    from{margin-left:-88%;}
+    to{margin-left:0;}
+}
+
+@-webkit-keyframes pullBarReverse {
+	from{margin-left:0;}
+    to{margin-left:-88%;}
+}
+
+@keyframes pullBarReverse {
+    from{margin-left:0;}
+    to{margin-left:-88%;}
 }

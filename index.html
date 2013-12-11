@@ -1,35 +1,57 @@
 <html>
     <head>
-        <!--Zach Jones-->
-        <title>Soundcloud API Example</title>
+        <!--Zach Jones created this on 11/15/13-->
+        <title>Sound Santa</title>
     </head>
     <body>
-        <ul>
-            <li id="home">Home</li>
-            <li id="search">Search</li>
-        </ul>
-        <div id="content">
+        <div id="container">
+            
+            <header>
+            	<img src="assets/santa.png" alt="santa">
+                <h1>Sound Santa</h1>
+                 <ul>
+                     <li id="home">Home</li>
+                     <li id="search">Search</li>
+                 </ul>
+            </header>
             
             
-        </div>
+            <div id="pullBar">
+                
+                <div id="searchBar">
+                <input type="text" id="txtSearch" placeholder="Search Sound Santa">
+                <button id="btnSearch">Search</button>
+                </div>
+                
+                <div id="nowPlaying">
+                    Now playing: <span id="txtNow">Nothing</span><br>
+                    <progress id='position' max='1' value='0'><div></div></progress>
+				</div>
+                
+                <img src="assets/deer.png">
+                
+                <div id="buttons">
+                	<button id="btnPlay">Play</button>
+                	<button id="btnStop">Stop</button>
+				</div>
+                
+            </div>
         
-        <div>
-            Now playing: <span id="txtNow"></span>
-            <input type="button" value="search" id="btnSearch" />
-            <input type="button" value="stop" id="btnStop" />
-        </div>
-        <div>
-            <progress id='position' max='1' value='0'>
-            </progress>
-        </div>
-      
-        
-        <div id="playlist"></div>
+            <div id="content"></div>
+             
+            <div id="playlist">
+                <h2>Wishlist</h2>
+                <img src="assets/tree.png" alt="christmas tree">
+                <ul></ul>
+			</div>
+            
         
         <script src="http://code.jquery.com/jquery-latest.min.js"></script>
         <script src="http://connect.soundcloud.com/sdk.js"></script>
         <script src="js/jukebox.js"></script>
         <script src="js/site.js"></script>
         <link href="css/style.css" rel="stylesheet" type="text/css">
+		</div>
+                
     </body>
 </html>
